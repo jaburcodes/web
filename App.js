@@ -84,14 +84,14 @@ class Main extends Component {
       console.log('render');
       return (
         <Wrapper>
-
-          <RTCView streamURL={this.state.videoURL} style={styles.container} />
+          <RTCView streamURL={this.state.videoURL} style={styles.otherWebrtc} />
+          <RTCView streamURL={this.state.videoURL} style={styles.myWebrtc} />
         </Wrapper>
       );
   }
 }
 const styles = {
-  container: {
+  myWebrtc: {
     backgroundColor: '#ccc',
     borderRadius: 5,
     width: 75,
@@ -99,6 +99,10 @@ const styles = {
     position: 'absolute',
     right: 50,
     bottom: 50,
+  },
+  otherWebrtc: {
+    backgroundColor: '#ccc',
+    flex: 1,
   }
 };
 
